@@ -1,0 +1,294 @@
+.wrap {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 14px 20px;
+  text-align: left;
+}
+
+.table tbody tr {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.2s;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.table td {
+  padding: 14px 20px;
+  vertical-align: middle;
+  height: 64px;
+}
+
+.thStar {
+  width: 48px;
+}
+
+.right {
+  text-align: right !important;
+}
+
+.center {
+  text-align: center !important;
+  width: 140px;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.3);
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.star:hover {
+  color: #f3ba2f;
+}
+
+.starOn {
+  color: #f3ba2f;
+}
+
+.tokId {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tokLogo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.tokLogo img {
+  width: 28px;
+  height: 28px;
+}
+
+.arb {
+  width: 24px;
+  height: 24px;
+}
+
+.tokText b {
+  font-size: 15px;
+  display: block;
+  font-weight: 700;
+}
+
+.tokText span {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.price {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.up {
+  background: rgba(0, 196, 140, 0.15);
+  color: var(--success);
+}
+
+.dn {
+  background: rgba(255, 77, 77, 0.15);
+  color: #ff4d4d;
+}
+
+.balCol b {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  display: block;
+  font-weight: 600;
+}
+
+.balCol span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.sendBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(74, 109, 255, 0.12);
+  border: 1px solid rgba(74, 109, 255, 0.3);
+  color: #4a6dff;
+  border-radius: 10px;
+  height: 36px;
+  min-width: 120px;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.sendBtn:hover {
+  background: rgba(74, 109, 255, 0.25);
+  border-color: #4a6dff;
+}
+
+.noFont {
+  font-family: inherit !important;
+}
+
+/* Mobile card list — hidden by default */
+.mobileList {
+  display: none;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card:last-of-type {
+  border-bottom: none;
+}
+
+.cardInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.cardTicker {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cardName {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-left: 6px;
+}
+
+.cardBalCrypto {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+}
+
+.cardBot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardPrice {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.cardBotRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardBalUsd {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 900px) {
+  .table {
+    font-size: 13px;
+  }
+
+  .table td,
+  .table thead th {
+    padding: 10px 12px;
+  }
+
+  .table td {
+    white-space: nowrap;
+  }
+}
+
+.mobileActions {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobileActions {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+  }
+
+  .table {
+    display: none;
+  }
+
+  .mobileList {
+    display: block;
+  }
+
+  .change {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .sendBtn {
+    width: 100%;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,270 @@
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Анимация 1: поток по пунктиру стрелок */
+@keyframes flowDash {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -7;
+  }
+
+  /* период = dasharray 4+3 */
+}
+
+/* Анимация 2: поочерёдный glow на иконках */
+@keyframes glowRub {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(74, 109, 255, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 0 32px rgba(74, 109, 255, 0.55), 0 0 8px rgba(74, 109, 255, 0.3);
+  }
+}
+
+@keyframes glowUsdt {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(38, 161, 123, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 0 32px rgba(38, 161, 123, 0.55), 0 0 8px rgba(38, 161, 123, 0.3);
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  background: linear-gradient(160deg, rgba(27, 21, 71, 0.95), rgba(10, 11, 46, 0.98));
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 28px 24px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(91, 61, 184, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(38, 161, 123, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(38, 161, 123, 0.1);
+  border: 1px solid rgba(38, 161, 123, 0.2);
+  border-radius: 999px;
+  padding: 5px 14px 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--success);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.flowRow {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.curBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.curIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.rub {
+  background: rgba(74, 109, 255, 0.12);
+  border: 1.5px solid rgba(74, 109, 255, 0.3);
+  color: #8ba3ff;
+  box-shadow: 0 0 20px rgba(74, 109, 255, 0.15);
+  animation: glowRub 2s ease-in-out infinite;
+}
+
+.usdt {
+  background: rgba(38, 161, 123, 0.12);
+  border: 1.5px solid rgba(38, 161, 123, 0.3);
+  color: var(--success);
+  box-shadow: 0 0 20px rgba(38, 161, 123, 0.15);
+  animation: glowUsdt 2s ease-in-out infinite 1s;
+}
+
+/* Анимированный пунктир на стрелках */
+.flowLine {
+  animation: flowDash 1s linear infinite;
+}
+
+.curAmount {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.curLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: -4px;
+}
+
+.curCheck {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--success);
+  font-weight: 600;
+  margin-top: -2px;
+  letter-spacing: 0.3px;
+}
+
+.bridge {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+}
+
+.bridgeLine {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.bridgeLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+  margin: 20px 0 16px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+.detailLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.detailValue {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.green {
+  color: var(--success);
+}
+
+@media (max-width: 1024px) {
+  .bridgeLabel img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 550px) {
+  .bridgeLabel img {
+    display: none;
+  }
+
+  .bridgeLabel+.bridgeLine {
+    display: none;
+  }
+
+  .curAmount {
+    font-size: 16px;
+  }
+
+  .curIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}

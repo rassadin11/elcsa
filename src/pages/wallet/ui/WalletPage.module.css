@@ -1,0 +1,40 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deep);
+}
+
+.main {
+  flex: 1;
+  padding: 28px 32px 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.glow {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 320px;
+  background: radial-gradient(ellipse, rgba(61, 42, 142, 0.15), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 992px) {
+  .glow {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    padding: 20px 16px 32px;
+  }
+}

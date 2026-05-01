@@ -1,0 +1,20 @@
+:root {
+  --bg-deep: #0a0b2e;
+  --bg-mid: #1b1547;
+  --grad-edge: #3d2a8e;
+  --grad-center: #5b3db8;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b5b0cc;
+
+  --interactive: #4a6dff;
+  --highlight: #00d4ff;
+  --success: #26a17b;
+  --error: #ff4466;
+
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}

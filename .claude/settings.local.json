@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npx create-vite@latest . --template react-ts)",
+      "Bash(npx create-vite@latest myapp --template react-ts)",
+      "Bash(grep -E \"\\\\.\\(ts|tsx|jsx|js|json\\)$\")",
+      "Bash(xargs file *)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(gunzip -c \"C:/Users/Artem/.claude/projects/D--frontend-elcsa/ac8d7be5-b523-4ee2-b004-dbc8436a7b03/tool-results/webfetch-1777622702448-qhis0i.bin\")",
+      "Bash(mkdir -p /tmp/elcsa-bundle)",
+      "Bash(tar -xzf \"C:/Users/Artem/.claude/projects/D--frontend-elcsa/ac8d7be5-b523-4ee2-b004-dbc8436a7b03/tool-results/webfetch-1777622702448-qhis0i.bin\" -C /tmp/elcsa-bundle)",
+      "Bash(cp \"/c/Users/Artem/.claude/projects/D--frontend-elcsa/ac8d7be5-b523-4ee2-b004-dbc8436a7b03/tool-results/webfetch-1777622702448-qhis0i.bin\" /tmp/elcsa-bundle/bundle.tar.gz)",
+      "Bash(tar -xzf /tmp/elcsa-bundle/bundle.tar.gz -C /tmp/elcsa-bundle)",
+      "Bash(cp \"/tmp/elcsa-bundle/elcsa/project/ЭКСА Landing v2.html\" /tmp/elcsa-bundle/landing-v2.html)",
+      "Bash(cp \"/tmp/elcsa-bundle/elcsa/project/ЭКСА Landing v2 standalone.html\" /tmp/elcsa-bundle/landing-v2-standalone.html)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -sS http://localhost:3000/)",
+      "Bash(curl -sS \"http://localhost:3000/src/main.tsx\" -o /dev/null -w \"main.tsx: %{http_code}\\\\n\")",
+      "Bash(curl -sS \"http://localhost:3000/src/pages/home/ui/HomePage.tsx\" -o /dev/null -w \"HomePage: %{http_code}\\\\n\")",
+      "Bash(curl -sS \"http://localhost:3000/src/widgets/hero/ui/Hero.tsx\" -o /dev/null -w \"Hero: %{http_code}\\\\n\")",
+      "Bash(curl -sS \"http://localhost:3000/src/widgets/currency-converter/ui/Converter.tsx\" -o /dev/null -w \"Converter: %{http_code}\\\\n\")"
+    ]
+  }
+}
