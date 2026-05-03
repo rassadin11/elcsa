@@ -7,10 +7,12 @@ import { LoginPage } from '@pages/login'
 import { RegisterPage } from '@pages/register'
 import { SeedPhrasePage } from '@pages/seed-phrase'
 import { ROUTES } from '@shared/config/routes'
+import { ScrollToTop } from './ScrollToTop'
 
 export function RouterProvider() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.WALLET} element={<WalletPage />} />
