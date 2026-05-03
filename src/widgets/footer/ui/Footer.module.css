@@ -129,7 +129,6 @@
 
 @media (max-width: 640px) {
   .footer {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 32px 24px;
   }
 }

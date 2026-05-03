@@ -1,0 +1,84 @@
+.col {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--grad-edge), var(--grad-center));
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.avatar svg {
+  width: 54px;
+  height: 54px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.avatar:hover .overlay {
+  opacity: 1;
+}
+
+.overlay svg {
+  width: 40px;
+  height: 40px;
+}
+
+.col button {
+  width: 100%;
+}
+
+.addPhoto {
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .addPhoto {
+    display: none;
+  }
+}
+
+@media (max-width: 549px) {
+  .col {
+    width: 90px;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .avatar svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .overlay svg {
+    width: 22px;
+    height: 22px;
+  }
+}

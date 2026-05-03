@@ -21,7 +21,20 @@
       "Bash(curl -sS \"http://localhost:3000/src/main.tsx\" -o /dev/null -w \"main.tsx: %{http_code}\\\\n\")",
       "Bash(curl -sS \"http://localhost:3000/src/pages/home/ui/HomePage.tsx\" -o /dev/null -w \"HomePage: %{http_code}\\\\n\")",
       "Bash(curl -sS \"http://localhost:3000/src/widgets/hero/ui/Hero.tsx\" -o /dev/null -w \"Hero: %{http_code}\\\\n\")",
-      "Bash(curl -sS \"http://localhost:3000/src/widgets/currency-converter/ui/Converter.tsx\" -o /dev/null -w \"Converter: %{http_code}\\\\n\")"
+      "Bash(curl -sS \"http://localhost:3000/src/widgets/currency-converter/ui/Converter.tsx\" -o /dev/null -w \"Converter: %{http_code}\\\\n\")",
+      "Bash(Get-ChildItem -Path \"D:\\\\frontend\\\\elcsa\" -Directory)",
+      "Bash(Select-Object Name)",
+      "Bash(Get-ChildItem -Path \"D:\\\\frontend\\\\elcsa\" -Recurse -Directory)",
+      "Bash(Select-Object -First 20)",
+      "Bash(Format-Table FullName)",
+      "Bash(Get-ChildItem -Path \"D:\\\\frontend\\\\elcsa\\\\src\\\\shared\\\\ui\" -Directory)",
+      "Bash(npx vite *)",
+      "Bash(Get-ChildItem -Path . -Depth 2)",
+      "Bash(Select-Object FullName)",
+      "Bash(Get-ChildItem -Path \"D:\\\\frontend\\\\elcsa\\\\src\\\\widgets\\\\wallet-header\" -Recurse)",
+      "Bash(node *)",
+      "Bash(python3 *)",
+      "Bash(powershell.exe *)"
     ]
   }
 }

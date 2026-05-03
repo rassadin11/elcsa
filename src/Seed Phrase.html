@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="ru"><head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЭКСА — Сид Фраза</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0A0B2E;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Navbar */
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;border-bottom:1px solid rgba(255,255,255,0.06);flex-shrink:0}
+  .nav-logo{display:flex;align-items:center}
+  .nav-logo img{height:32px}
+  .ticker{display:flex;gap:24px;font-size:13px;font-family:var(--mono)}
+  .tick{display:flex;align-items:center;gap:6px;color:#B5B0CC}
+  .tick b{color:#fff}
+  .tick .up{color:#00C48C}.tick .dn{color:#FF4D4D}
+  .nav-account{display:flex;align-items:center;gap:10px}
+  .avatar{width:34px;height:34px;border-radius:50%;background:#3D2A8E}
+  .nav-account span{color:#B5B0CC;font-size:14px;font-weight:500}
+
+  /* Content */
+  .content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+  }
+
+  /* Title row */
+  .title-row {
+    display: flex; align-items: flex-start; justify-content: space-between;
+  }
+  .title-row h1 {
+    font-size: 20px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .title-buttons {
+    display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+  }
+  .btn-outline {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    border-radius: 10px;
+    width: 160px;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    text-align: center;
+  }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.18);
+  }
+
+  /* Subtitle */
+  .subtitle {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #B5B0CC;
+    font-variant: all-small-caps;
+    letter-spacing: 0.08em;
+  }
+  .subtitle .countdown { color: #4A6DFF; font-weight: 700; }
+
+  /* Grid */
+  .seed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .seed-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    height: 52px;
+    display: flex; align-items: center;
+    padding: 0 18px;
+    gap: 10px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    cursor: default;
+    user-select: none;
+  }
+  .seed-card:hover {
+    border-color: rgba(74,109,255,0.4);
+    box-shadow: 0 0 12px rgba(74,109,255,0.15);
+  }
+  .seed-num {
+    color: #B5B0CC;
+    font-size: 13px;
+    min-width: 22px;
+    flex-shrink: 0;
+  }
+  .seed-word {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  /* Warning */
+  .warning {
+    margin-top: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .warning p {
+    max-width: 480px;
+    font-size: 13px;
+    color: #B5B0CC;
+    line-height: 1.6;
+  }
+  .warning .icon { color: #FF4D4D; font-size: 18px; margin-bottom: 8px; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>:root{--mono:'JetBrains Mono',monospace}</style></head>
+<body data-cc-id="cc-4" style="cursor: crosshair; font-family: Manrope;">
+
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="logo-full-white.png" alt="ЭКСА">
+  </div>
+  <div class="ticker">
+    <div class="tick"><b>BTC</b> $66,916.00 <span class="up">+0.12%</span></div>
+    <div class="tick"><b>ETH</b> $2,053.97 <span class="dn">−0.12%</span></div>
+    <div class="tick"><b>SOL</b> $163.84 <span class="dn">−1.57%</span></div>
+  </div>
+  <div class="nav-account">
+    <div class="avatar"></div>
+    <span>Account 1</span>
+  </div>
+</nav>
+
+<main class="content" style="font-family: Manrope" data-cc-id="cc-5">
+  <div class="title-row" style="height: 70px; width: 896px" data-cc-id="cc-16">
+    <h1 style="width: 250px; font-size: 32px; font-family: Manrope;" data-cc-id="cc-17">СИД ФРАЗА</h1>
+    <div class="title-buttons">
+      <button class="btn-outline">СКРЫТЬ</button>
+      <button class="btn-outline" style="font-size: 13px">КОПИРОВАТЬ</button>
+    </div>
+  </div>
+
+  <div class="subtitle" style="font-size: 14px" data-cc-id="cc-15">АВТОМАТИЧЕСКОЕ СКРЫТИЕ ЧЕРЕЗ <span class="countdown" id="countdown">14</span>С</div>
+
+  <div class="seed-grid" id="seedGrid" data-cc-id="cc-9"><div class="seed-card"><span class="seed-num">1.</span><span class="seed-word">egg</span></div><div class="seed-card" data-cc-id="cc-13"><span class="seed-num">2.</span><span class="seed-word" data-cc-id="cc-14">phone</span></div><div class="seed-card"><span class="seed-num">3.</span><span class="seed-word">long</span></div><div class="seed-card"><span class="seed-num">4.</span><span class="seed-word">vibe</span></div><div class="seed-card" data-cc-id="cc-11"><span class="seed-num">5.</span><span class="seed-word" data-cc-id="cc-12">potato</span></div><div class="seed-card"><span class="seed-num">6.</span><span class="seed-word">soup</span></div><div class="seed-card" data-cc-id="cc-7"><span class="seed-num">7.</span><span class="seed-word" data-cc-id="cc-8">skirt</span></div><div class="seed-card" data-cc-id="cc-10"><span class="seed-num">8.</span><span class="seed-word">black</span></div><div class="seed-card"><span class="seed-num">9.</span><span class="seed-word">phase</span></div><div class="seed-card" data-cc-id="cc-6"><span class="seed-num">10.</span><span class="seed-word">word</span></div><div class="seed-card"><span class="seed-num">11.</span><span class="seed-word">num</span></div><div class="seed-card"><span class="seed-num">12.</span><span class="seed-word">cucumber</span></div></div>
+
+  <div class="warning" style="justify-content: center; flex-direction: row; align-items: flex-start">
+    <div class="icon" style="padding: 16px">⚠️</div>
+    <p>Никогда не передавайте сид-фразу третьим лицам. Тот, кто знает фразу — владеет кошельком.</p>
+  </div>
+</main>
+
+<script>
+  let sec = 52;
+  const el = document.getElementById('countdown');
+  setInterval(() => {
+    if (sec > 0) { sec--; el.textContent = sec; }
+  }, 1000);
+</script>
+
+
+</body></html>

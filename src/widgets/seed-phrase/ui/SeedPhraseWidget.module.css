@@ -1,0 +1,130 @@
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.titleButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.btnFixed {
+  width: 160px;
+}
+
+.btnFixed > * {
+  width: 100%;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-variant: all-small-caps;
+  letter-spacing: 0.08em;
+}
+
+.countdown {
+  color: var(--interactive);
+  font-weight: 700;
+}
+
+.seedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.seedCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  gap: 10px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  cursor: default;
+  user-select: none;
+}
+
+.seedCard:hover {
+  border-color: rgba(74, 109, 255, 0.4);
+  box-shadow: 0 0 12px rgba(74, 109, 255, 0.15);
+}
+
+.seedNum {
+  color: var(--text-secondary);
+  font-size: 13px;
+  min-width: 22px;
+  flex-shrink: 0;
+}
+
+.seedWord {
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.seedWordHidden {
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+}
+
+.warning {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.warningIcon {
+  font-size: 18px;
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+.warningText {
+  max-width: 480px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .seedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titleRow {
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .titleButtons {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}

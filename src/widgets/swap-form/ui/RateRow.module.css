@@ -1,0 +1,24 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 14px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.refresh {
+  background: none;
+  border: none;
+  color: var(--interactive);
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.35s;
+  padding: 0;
+}
+
+.refresh:hover {
+  transform: rotate(180deg) !important;
+}
