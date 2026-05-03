@@ -1,5 +1,7 @@
 import logo from '@shared/assets/logo-full-white.png'
 import styles from './Header.module.css'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '@shared/config/routes'
 
 export function Header() {
   return (
@@ -11,9 +13,9 @@ export function Header() {
         <a className={styles.link} href="#about">
           О нас
         </a>
-        <button className={styles.btn} type="button">
+        <Link className={styles.btn} to={ROUTES.WALLET}>
           Личный кабинет
-        </button>
+        </Link>
       </div>
     </nav>
   )

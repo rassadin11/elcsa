@@ -1,6 +1,8 @@
 import styles from './BalanceCard.module.css'
 import topup from '@shared/assets/topup.svg'
 import swap from '@shared/assets/swap.svg'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '@shared/config/routes'
 
 export function BalanceCard() {
   return (
@@ -15,10 +17,10 @@ export function BalanceCard() {
           <img src={swap} alt="swap" />
           Пополнить кошелёк
         </button>
-        <button className={styles.btn} type="button">
+        <Link to={ROUTES.SWAP} className={styles.btn} type="button">
           <img src={topup} alt="topup" />
           Своп / Бридж
-        </button>
+        </Link>
       </div>
     </div>
   )

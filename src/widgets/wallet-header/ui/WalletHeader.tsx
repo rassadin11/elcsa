@@ -1,5 +1,7 @@
 import logo from '@shared/assets/logo-full-white.png'
 import styles from './WalletHeader.module.css'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '@shared/config/routes'
 
 const TICKERS = [
   { symbol: 'BTC', price: '$66,916.00', change: 0.12, },
@@ -24,10 +26,10 @@ export function WalletHeader() {
           </div>
         ))}
       </div>
-      <div className={styles.account}>
+      <Link to={ROUTES.PROFILE} className={styles.account}>
         <div className={styles.avatar} />
         <span>Test account</span>
-      </div>
+      </Link>
     </nav>
   )
 }
